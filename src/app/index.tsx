@@ -21,15 +21,20 @@ export function App() {
   return (
     <BrowserRouter>
       <Helmet
-        titleTemplate="%s - React Boilerplate"
-        defaultTitle="React Boilerplate"
+        titleTemplate="%s - Digi Plants NFT"
+        defaultTitle="Digi Plants"
         htmlAttributes={{ lang: i18n.language }}
       >
-        <meta name="description" content="A React Boilerplate application" />
+        <meta name="description" content="A Digi plant application" />
       </Helmet>
 
       <Switch>
         <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />
+        <Route
+          exact
+          path={process.env.PUBLIC_URL + '/settings'}
+          component={HomePage}
+        />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />

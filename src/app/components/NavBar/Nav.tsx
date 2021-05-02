@@ -1,29 +1,39 @@
 import * as React from 'react';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
-import { ReactComponent as DocumentationIcon } from './assets/documentation-icon.svg';
-import { ReactComponent as GithubIcon } from './assets/github-icon.svg';
+import { ReactComponent as AccountIconBlack } from './assets/account_circle_black_24dp.svg';
+import { ReactComponent as AccountIconWhite } from './assets/account_circle_white_24dp.svg';
+import { ReactComponent as ParkWhiteIcon } from './assets/park_white_24dp.svg';
+import { ReactComponent as ParkBlackIcon } from './assets/park_black_24dp.svg';
+
+import { selectThemeKey } from 'styles/theme/slice/selectors';
+import { ThemeSwitch } from '../ThemeSwitch';
 
 export function Nav() {
+  const theme = useSelector(selectThemeKey);
+
   return (
     <Wrapper>
-      <Item
-        href="https://cansahin.gitbook.io/react-boilerplate-cra-template/"
-        target="_blank"
-        title="Documentation Page"
-        rel="noopener noreferrer"
-      >
-        <DocumentationIcon />
-        About us
+      <Item to="/plants">
+        {theme === 'light' ? (
+          <ParkBlackIcon className="icon" />
+        ) : (
+          <ParkWhiteIcon className="icon" />
+        )}
+        Plants
       </Item>
-      <Item
-        href="https://github.com/react-boilerplate/react-boilerplate-cra-template"
-        target="_blank"
-        title="Github Page"
-        rel="noopener noreferrer"
-      >
-        <GithubIcon />
-        Contact
+      <Item to="/wallet">
+        {theme === 'light' ? (
+          <AccountIconBlack className="icon" />
+        ) : (
+          <AccountIconWhite className="icon" />
+        )}
+        Connect Wallet
       </Item>
+      <div>
+        <ThemeSwitch />
+      </div>
     </Wrapper>
   );
 }
@@ -33,13 +43,13 @@ const Wrapper = styled.nav`
   margin-right: -1rem;
 `;
 
-const Item = styled.a`
+const Item = styled(Link)`
   color: ${p => p.theme.primary};
   cursor: pointer;
   text-decoration: none;
   display: flex;
   padding: 0.25rem 1rem;
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 500;
   align-items: center;
 
@@ -52,6 +62,6 @@ const Item = styled.a`
   }
 
   .icon {
-    margin-right: 0.25rem;
+    margin-right: 5px;
   }
 `;

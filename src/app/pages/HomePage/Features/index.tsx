@@ -65,20 +65,6 @@ export function Features() {
           </Content>
         </Feature>
         <Feature>
-          <CSSIcon className="feature-icon" />
-          <Content>
-            <SubTitle>Next Generation CSS</SubTitle>
-            <P>
-              Write composable CSS that’s co-located with your components for
-              complete modularity. Ship only the styles that are on the page for
-              the best performance. Generate application-wide styles and themes
-              for your components. Change the theme below to see how easy and
-              intuitive theming can ever be!
-            </P>
-            <ThemeSwitch />
-          </Content>
-        </Feature>
-        <Feature>
           <INTLIcon className="feature-icon" />
           <Content>
             <SubTitle>{t(messages.i18nTitle())} </SubTitle>

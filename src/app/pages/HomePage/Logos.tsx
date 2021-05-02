@@ -1,16 +1,30 @@
 import * as React from 'react';
+import { useSelector } from 'react-redux';
+import { selectThemeKey } from 'styles/theme/slice/selectors';
+
 import styled from 'styled-components/macro';
-import { ReactComponent as GrassLogo } from './assets/grass_black_48dp.svg';
-import { ReactComponent as FlowerLogo } from './assets/yard_black_48dp.svg';
-import { ReactComponent as RPLogo } from './assets/rp-logo.svg';
+import { ReactComponent as GrassLogoBlack } from './assets/grass_black_48dp.svg';
+import { ReactComponent as FlowerLogoBlack } from './assets/yard_black_48dp.svg';
+import { ReactComponent as GrassLogoWhite } from './assets/grass_white_48dp.svg';
+import { ReactComponent as FlowerLogoWhite } from './assets/yard_white_48dp.svg';
 import { ReactComponent as PlusSign } from './assets/plus-sign.svg';
 
 export function Logos() {
+  const theme = useSelector(selectThemeKey);
+
   return (
     <Wrapper>
-      <GrassLogo className="logo" />
+      {theme === 'light' ? (
+        <GrassLogoBlack className="logo" />
+      ) : (
+        <GrassLogoWhite className="logo" />
+      )}
       <PlusSign className="sign" />
-      <FlowerLogo className="logo" />
+      {theme === 'light' ? (
+        <FlowerLogoBlack className="logo" />
+      ) : (
+        <FlowerLogoWhite className="logo" />
+      )}
     </Wrapper>
   );
 }
