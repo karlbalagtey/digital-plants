@@ -6,9 +6,10 @@ import { ReactComponent as AccountIconBlack } from './assets/account_circle_blac
 import { ReactComponent as AccountIconWhite } from './assets/account_circle_white_24dp.svg';
 import { ReactComponent as ParkWhiteIcon } from './assets/park_white_24dp.svg';
 import { ReactComponent as ParkBlackIcon } from './assets/park_black_24dp.svg';
+import { ReactComponent as SettingsWhiteIcon } from './assets/settings_white_24dp.svg';
+import { ReactComponent as SettingsBlackIcon } from './assets/settings_black_24dp.svg';
 
 import { selectThemeKey } from 'styles/theme/slice/selectors';
-import { ThemeSwitch } from '../ThemeSwitch';
 
 export function Nav() {
   const theme = useSelector(selectThemeKey);
@@ -31,9 +32,14 @@ export function Nav() {
         )}
         Connect Wallet
       </Item>
-      <div>
-        <ThemeSwitch />
-      </div>
+      <Item to="/settings">
+        {theme === 'light' ? (
+          <SettingsBlackIcon className="icon" />
+        ) : (
+          <SettingsWhiteIcon className="icon" />
+        )}
+        Settings
+      </Item>
     </Wrapper>
   );
 }

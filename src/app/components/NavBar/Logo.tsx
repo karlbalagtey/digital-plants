@@ -1,18 +1,20 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
 
 export function Logo() {
   return (
-    <Wrapper>
+    <Wrapper to="/">
       <Title>Digi Plants</Title>
       <Description>NFT Garden</Description>
     </Wrapper>
   );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled(Link)`
   display: flex;
   align-items: center;
+  text-decoration: none;
 `;
 
 const Title = styled.div`

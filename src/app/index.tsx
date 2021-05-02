@@ -13,6 +13,8 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { GlobalStyle } from '../styles/global-styles';
 
 import { HomePage } from './pages/HomePage/Loadable';
+import { PlantsPage } from './pages/PlantsPage/Loadable';
+import { SettingsPage } from './pages/SettingsPage/Loadable';
 import { NotFoundPage } from './pages/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
 
@@ -32,8 +34,13 @@ export function App() {
         <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />
         <Route
           exact
+          path={process.env.PUBLIC_URL + '/plants'}
+          component={PlantsPage}
+        />
+        <Route
+          exact
           path={process.env.PUBLIC_URL + '/settings'}
-          component={HomePage}
+          component={SettingsPage}
         />
         <Route component={NotFoundPage} />
       </Switch>

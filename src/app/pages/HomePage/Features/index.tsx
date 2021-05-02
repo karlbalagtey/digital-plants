@@ -57,21 +57,6 @@ export function Features() {
             <GithubRepoForm />
           </Content>
         </Feature>
-        <Feature>
-          <INTLIcon className="feature-icon" />
-          <Content>
-            <SubTitle>{t(messages.i18nTitle())} </SubTitle>
-            <P>
-              {t(messages.i18nDescription())}
-              <br />
-              <small>
-                (Only some of the features below are translated to demonstrate
-                an example)
-              </small>
-            </P>
-            <LanguageSwitch />
-          </Content>
-        </Feature>
       </List>
     </>
   );
