@@ -120,12 +120,12 @@ Array [
         <div
           className="c4"
         >
-          React Boilerplate
+          Digital Plants
         </div>
         <div
           className="c5"
         >
-          Create React App Template
+          NFT Garden
         </div>
       </div>
       <nav
@@ -141,7 +141,7 @@ Array [
           <svg>
             documentation-icon.svg
           </svg>
-          Documentation
+          About us
         </a>
         <a
           className="c7"
@@ -153,7 +153,7 @@ Array [
           <svg>
             github-icon.svg
           </svg>
-          Github
+          Contact
         </a>
       </nav>
     </div>

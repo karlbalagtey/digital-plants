@@ -4,30 +4,10 @@ exports[`<Masthead /> should render and match the snapshot 1`] = `
 <Masthead__Wrapper>
   <Logos />
   <Title>
-    React Boilerplate meets CRA
+    Digital Plants
   </Title>
   <Lead>
-    Now you can use the
-     
-    <A
-      href="https://www.reactboilerplate.com/"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      React Boilerplate
-    </A>
-     
-    as a
-     
-    <A
-      href="https://github.com/facebook/create-react-app"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Create React App
-    </A>
-     
-    template.
+    Now you can collect your favourite plants
   </Lead>
 </Masthead__Wrapper>
 `;

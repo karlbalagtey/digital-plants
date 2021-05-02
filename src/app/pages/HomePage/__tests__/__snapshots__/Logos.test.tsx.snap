@@ -31,7 +31,7 @@ exports[`<Logos /> should render and match the snapshot 1`] = `
     <svg
       class="logo"
     >
-      cra-logo.svg
+      grass_black_48dp.svg
     </svg>
     <svg
       class="sign"
@@ -41,7 +41,7 @@ exports[`<Logos /> should render and match the snapshot 1`] = `
     <svg
       class="logo"
     >
-      rp-logo.svg
+      yard_black_48dp.svg
     </svg>
   </div>
 </DocumentFragment>

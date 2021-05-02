@@ -13,7 +13,7 @@ export function Nav() {
         rel="noopener noreferrer"
       >
         <DocumentationIcon />
-        Documentation
+        About us
       </Item>
       <Item
         href="https://github.com/react-boilerplate/react-boilerplate-cra-template"
@@ -22,7 +22,7 @@ export function Nav() {
         rel="noopener noreferrer"
       >
         <GithubIcon />
-        Github
+        Contact
       </Item>
     </Wrapper>
   );

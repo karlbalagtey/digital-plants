@@ -1,15 +1,16 @@
 import * as React from 'react';
 import styled from 'styled-components/macro';
-import { ReactComponent as CRALogo } from './assets/cra-logo.svg';
+import { ReactComponent as GrassLogo } from './assets/grass_black_48dp.svg';
+import { ReactComponent as FlowerLogo } from './assets/yard_black_48dp.svg';
 import { ReactComponent as RPLogo } from './assets/rp-logo.svg';
 import { ReactComponent as PlusSign } from './assets/plus-sign.svg';
 
 export function Logos() {
   return (
     <Wrapper>
-      <CRALogo className="logo" />
+      <GrassLogo className="logo" />
       <PlusSign className="sign" />
-      <RPLogo className="logo" />
+      <FlowerLogo className="logo" />
     </Wrapper>
   );
 }
