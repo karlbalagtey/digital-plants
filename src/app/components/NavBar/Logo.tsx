@@ -5,7 +5,7 @@ import styled from 'styled-components/macro';
 export function Logo() {
   return (
     <Wrapper to="/">
-      <Title>Digi Plants</Title>
+      <Title>DigiPlants</Title>
       <Description>NFT Garden</Description>
     </Wrapper>
   );

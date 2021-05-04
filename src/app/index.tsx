@@ -23,11 +23,11 @@ export function App() {
   return (
     <BrowserRouter>
       <Helmet
-        titleTemplate="%s - Digi Plants NFT"
-        defaultTitle="Digi Plants"
+        titleTemplate="%s - DigiPlants NFT"
+        defaultTitle="DigiPlants"
         htmlAttributes={{ lang: i18n.language }}
       >
-        <meta name="description" content="A Digi plant application" />
+        <meta name="description" content="Mine and trade plant NFTs" />
       </Helmet>
 
       <Switch>

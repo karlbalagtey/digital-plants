@@ -8,7 +8,7 @@ export function PlantsPage() {
     <>
       <Helmet>
         <title>Plants Page</title>
-        <meta name="description" content="Settings page for Digi Plants" />
+        <meta name="description" content="Settings page for DigiPlants" />
       </Helmet>
       <NavBar />
       <PageWrapper>
